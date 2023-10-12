@@ -1,0 +1,1 @@
+$names = Import-Csv names.csv

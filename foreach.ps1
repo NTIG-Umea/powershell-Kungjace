@@ -1,5 +1,5 @@
-$names = @("Martin", "Jesper", "Alvin", "Jacob");
+$names = Import-Csv names.csv
 
 foreach($name in $names) {
-    Write-Output "$name e smartast";
+    Write-Host $name.firstname $name.lastname
 }
