@@ -1,0 +1,14 @@
+﻿New-ADUser -Name "Jacob" -AccountPassword (ConvertTo-SecureString "SuperSafePassword" -AsPlainText -Force) -Enabled $true
+Remove-ADUser "Jacob"
+Set-ADUser "Jacob"
+
+New-ADGroup -Name "GroupGang" -Description "Group for cool people"
+Remove-ADGroup -Identity "GroupGang"
+Set-ADGroup -Identity "GroupGang"
+
+New-ADOrganizationalUnit -Name "TheCoolUnit"
+Remove-ADOrganizationalUnit -Identity "TheCoolUnit"
+Set-ADOrganizationalUnit -Identity "TheCoolUnit"
+
+Add-ADGroupMember -Identity "GroupGang" -Members "Jacob", "Lukas"
+Remove-ADGroupMember -Identity "GroupGang" - Memebr "Lukas"
